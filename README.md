@@ -1,4 +1,4 @@
-# ⚡ Projeto de Engenharia de Dados: Consumo de Energia Elétrica no Brasil
+# ⚡Engenharia de Dados: Consumo de Energia Elétrica no Brasil
 
 Este é um projeto **real** de Engenharia de Dados, desenvolvido de ponta a ponta, com o objetivo de praticar e demonstrar todas as etapas do ciclo de vida de dados — desde a coleta até a visualização e integração com um agente de IA para consulta inteligente. Tudo isso utilizando **tecnologias gratuitas e acessíveis**.
 
