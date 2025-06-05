@@ -1,120 +1,80 @@
-# ⚡Engenharia de Dados: Consumo de Energia Elétrica no Brasil
+# 🔌 Consumo de Energia Elétrica no Brasil
 
-Este é um projeto **real** de Engenharia de Dados, desenvolvido de ponta a ponta, com o objetivo de praticar e demonstrar todas as etapas do ciclo de vida de dados — desde a coleta até a visualização e integração com um agente de IA para consulta inteligente. Tudo isso utilizando **tecnologias gratuitas e acessíveis**.
+Projeto de engenharia de dados com foco na análise do consumo de energia elétrica no Brasil, utilizando tecnologias **100% gratuitas** e execução **totalmente local**. Esta é uma versão inicial funcional, pensada para ser simples, clara e evolutiva.
 
----
-
-## 🎯 Objetivo
-
-Construir um pipeline completo de dados sobre o **consumo de energia elétrica no Brasil**, utilizando fontes públicas e ferramentas gratuitas, com foco em:
-
-- Coleta automatizada de dados reais
-- Armazenamento bruto e estruturado
-- Processamento, transformação e limpeza (ETL)
-- Armazenamento em banco de dados relacional
-- Criação de um dashboard interativo
-- Integração com um agente de IA para análise via linguagem natural
+> 🚧 **Status:** Em desenvolvimento — versão inicial funcional com expansão contínua.
 
 ---
 
-## 🧱 Arquitetura do Projeto
+## 🎯 Objetivos
 
-```mermaid
-graph TD;
-    A[Coleta de Dados (ONS)] --> B[Data Lake (CSV/Parquet)]
-    B --> C[ETL (Python + Pandas)]
-    C --> D[Data Warehouse (PostgreSQL)]
-    D --> E[Dashboard (Streamlit)]
-    D --> F[AI Agent (LangChain + GPT)]
+- Coletar dados públicos de consumo de energia no Brasil
+- Realizar limpeza, padronização e enriquecimento dos dados
+- Modelar os dados em um Data Warehouse (esquema estrela)
+- Criar dashboards interativos com ferramentas gratuitas
+- Demonstrar domínio de um pipeline de dados completo, gratuito e local
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Etapa                    | Ferramentas Gratuitas                  |
+|--------------------------|----------------------------------------|
+| Coleta & ETL             | Python (pandas, requests)              |
+| Armazenamento            | CSV local, SQLite ou PostgreSQL local |
+| Modelagem de Dados       | SQL + esquema estrela                 |
+| Visualização             | Power BI Desktop (gratuito)           |
+| Documentação & Código    | GitHub + Markdown                     |
+
+---
+
+## 📁 Estrutura do Projeto
+
 ```
-
----
-
-## 📚 Tecnologias, Organização e Funcionalidades
-
-Este projeto foi pensado para ser simples, realista e gratuito. Abaixo estão as tecnologias utilizadas, a estrutura do repositório e as funcionalidades implementadas.
-
-### 🛠️ Tecnologias Utilizadas
-
-| Etapa                   | Ferramenta/Ferramentas                     |
-|------------------------|--------------------------------------------|
-| Coleta de Dados        | Python, requests, pandas                   |
-| Armazenamento Bruto    | CSV/Parquet ou MinIO (opcional)            |
-| Processamento (ETL)    | Python, pandas                             |
-| Banco de Dados         | PostgreSQL (usando Neon, gratuito)         |
-| Visualização           | Streamlit                                  |
-| Orquestração           | GitHub Actions                             |
-| Agente de IA           | LangChain + OpenAI API (plano gratuito)    |
-| Variáveis Sensíveis    | python-dotenv                              |
-| Versionamento          | Git, GitHub                                |
-
-### 📦 Organização do Repositório
-
-```bash
 consumo-energia-brasil/
-├── data/
-│   ├── raw/             # Dados brutos coletados
-│   └── processed/       # Dados transformados
-├── etl/
-│   └── transform.py     # Script de limpeza e transformação
-├── db/
-│   └── schema.sql       # Estrutura do banco de dados
-├── dashboard/
-│   └── app.py           # Código do dashboard em Streamlit
-├── ai_agent/
-│   └── agent.py         # Agente de IA para consultas aos dados
-├── .github/workflows/
-│   └── etl.yml          # Automação com GitHub Actions
-├── requirements.txt     # Dependências do projeto
-└── README.md            # Documentação geral do projeto
+├── data/            # Dados brutos e tratados
+├── etl/             # Scripts de extração e transformação
+├── sql/             # Scripts de modelagem e carga
+├── powerbi/         # Dashboards do Power BI (.pbix)
+├── notebooks/       # Cadernos Jupyter (opcional)
+└── README.md        # Documentação principal
 ```
 
-### 🧠 Funcionalidades do AI Agent
+---
 
-Este projeto contará com um agente de IA capaz de interpretar e responder perguntas sobre os dados de consumo de energia em **linguagem natural**.
+## 📊 Fontes de Dados
 
-#### Exemplos de perguntas:
-- "Qual foi o estado com maior consumo residencial em 2023?"
-- "Me mostre a média mensal da região Nordeste nos últimos 5 anos."
-- "Qual região mais consumiu energia elétrica no verão?"
-- "Como foi a evolução do consumo no Brasil entre 2010 e 2024?"
-
-Tecnologias:
-- `LangChain`
-- `OpenAI GPT`
-- Integração com o banco de dados PostgreSQL
+- [EPE - Empresa de Pesquisa Energética](https://www.epe.gov.br/)
+- [ANEEL - Agência Nacional de Energia Elétrica](https://www.aneel.gov.br/)
+- [Governo Federal - Dados Abertos](https://dados.gov.br/)
 
 ---
 
-## 🔗 Fontes de Dados
+## ✅ Roadmap (Versão Inicial)
 
-- [ONS - Operador Nacional do Sistema Elétrico](https://dados.ons.org.br)
-- [ANEEL - Agência Nacional de Energia Elétrica](https://dadosabertos.aneel.gov.br)
-
----
-
-## 🚧 Em Desenvolvimento
-
-- [x] Criação da estrutura do projeto
-- [x] Criação do arquivo `requirements.txt`
-- [x] Criação e publicação do `README.md`
-- [ ] Coleta automatizada dos dados via script
-- [ ] Armazenamento em `data/raw/`
-- [ ] Criação do ETL
-- [ ] Upload dos dados para banco PostgreSQL
-- [ ] Construção do dashboard (Streamlit)
-- [ ] Integração do AI Agent
+- [ ] Coleta dos dados públicos (.csv)
+- [ ] Processamento e limpeza com Python
+- [ ] Criação das tabelas fato e dimensão
+- [ ] Modelagem em esquema estrela
+- [ ] Visualização com Power BI Desktop
+- [ ] Prints e documentação dos dashboards
+- [ ] Publicação de insights no GitHub/LinkedIn
 
 ---
 
-## 📄 Licença
+## 🧠 Aprendizados Esperados
 
-Este projeto é de uso livre para fins educacionais e profissionais. Sinta-se à vontade para clonar, adaptar ou contribuir.
+- Prática com ETL e Python aplicado a dados reais
+- Modelagem de dados voltada para análise (BI)
+- Construção de dashboards gratuitos e interativos
+- Organização e entrega de projetos com documentação clara
+- Pipeline 100% gratuito, do início ao fim
 
 ---
 
-## 👨‍💻 Sobre o Autor
+## 👨‍💻 Autor
 
-Este projeto está sendo desenvolvido por **um estudante de Engenharia Elétrica em transição para Engenharia de Dados**, com foco total em aplicar os conhecimentos aprendidos na prática, demonstrar domínio técnico e gerar visibilidade profissional para o mercado de tecnologia.
+**Matheus Mendes dos Santos**  
+[GitHub](https://github.com/matheussmends) • [LinkedIn](https://www.linkedin.com/in/matheussmends/)
 
-**Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/matheussmends/).**
+---
